@@ -1,4 +1,4 @@
-package com.banking.witdrawal.service.app.servicioImpl;
+package com.banking.witdrawal.service.app.servicio.imp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
-public class WitdrawalServiceImpl implements WitdrawalService{
+public class WitdrawalServiceImp implements WitdrawalService{
 
 	//Dependency injection required for the class work
 	@Autowired
