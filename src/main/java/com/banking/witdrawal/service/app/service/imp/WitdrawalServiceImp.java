@@ -1,4 +1,4 @@
-package com.banking.witdrawal.service.app.servicio.imp;
+package com.banking.witdrawal.service.app.service.imp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
