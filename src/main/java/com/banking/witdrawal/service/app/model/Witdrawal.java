@@ -26,9 +26,9 @@ public class Witdrawal {
 	//verification pin
 	private String password;
 	//Dollar or soles
-	private int moneyType;
+	private Integer moneyType;
 	//Witdrawal status approved or rejected
-	private int status;
+	private Integer status;
 	// Date operation
 	private Date operationDate;
 }
