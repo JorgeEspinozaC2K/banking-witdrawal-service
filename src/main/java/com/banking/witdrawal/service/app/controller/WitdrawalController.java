@@ -1,6 +1,7 @@
 package com.banking.witdrawal.service.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,7 +23,7 @@ public class WitdrawalController {
 	private WitdrawalService witdrawalService;
 	
 	//This method displays all the information from the transaction database
-	@GetMapping
+	@GetMapping("{id}")
 	public Flux<Witdrawal> index(){
 	return witdrawalService.findAll();
 	}
@@ -32,4 +33,10 @@ public class WitdrawalController {
 	public Mono<Witdrawal> save(@RequestBody Witdrawal witdrawal){
 		return witdrawalService.save(witdrawal);
 	}
+		
+	@DeleteMapping("/delete")
+	public Mono<Void> deleteWitdrawal(@RequestBody Witdrawal witdrawal){
+		return witdrawalService.delete(witdrawal);
+	}
+	
 }
