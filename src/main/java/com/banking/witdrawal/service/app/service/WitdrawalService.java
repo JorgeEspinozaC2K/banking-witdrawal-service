@@ -30,4 +30,11 @@ public interface WitdrawalService {
 	 * @return Mono type Void
 	 */
 	public Mono<Void> delete(Witdrawal witdrawal);
+	
+	/**
+	 * This method finds witdrawals from an account
+	 * @param customerId String
+	 * @return Flux type witdrawal
+	 */
+	public Flux<Witdrawal> findByAccountId(String AccountId);
 }
