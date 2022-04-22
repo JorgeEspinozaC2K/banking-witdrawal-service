@@ -15,7 +15,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/v1/witdrawal")
+@RequestMapping("/witdrawal")
 public class WitdrawalController {
 
 	//Dependency injection required for the class work
