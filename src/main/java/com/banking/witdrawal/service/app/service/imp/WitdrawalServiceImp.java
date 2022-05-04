@@ -54,5 +54,10 @@ public class WitdrawalServiceImp implements WitdrawalService{
 					return Mono.empty();
 				});
 	}
+
+	@Override
+	public Flux<Witdrawal> findAllTenLast(Long cardNumber) {
+		return witdrawalRepository.findTop10ByCardNumberOrderByOperationDateDesc(cardNumber);
+	}
 	
 }

@@ -37,4 +37,6 @@ public interface WitdrawalService {
 	 * @return Flux type witdrawal
 	 */
 	public Flux<Witdrawal> findByAccountId(String AccountId);
+	
+	public Flux<Witdrawal> findAllTenLast(Long cardNumber);
 }

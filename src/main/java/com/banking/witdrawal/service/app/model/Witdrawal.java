@@ -1,7 +1,6 @@
 package com.banking.witdrawal.service.app.model;
 
-import java.util.Date;
-
+import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -19,16 +18,16 @@ public class Witdrawal {
 	
 	@Id
 	private String id;
+	private Boolean fromCard;
+	private Long cardNumber;
 	//account number to withdraw
 	private Long numAccount;
 	//amount to withdraw
-	private Long amountWithdraw;
+	private Double amountWithdraw;
 	//verification pin
 	private String password;
-	//Dollar or soles
-	private Integer moneyType;
-	//Witdrawal status approved or rejected
+	//Withdrawal status approved or rejected
 	private Integer status;
 	// Date operation
-	private Date operationDate;
+	private LocalDate operationDate = LocalDate.now();
 }

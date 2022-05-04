@@ -1,5 +1,6 @@
 package com.banking.witdrawal.service.app.entity;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class Account {
 	//Current Balance
 	private Double amountLeft = 0.00;
 	//Date modify
-	private Date modify;
+	private LocalDate modify;
 	//Date of creation
-	private Date createAt;
+	private LocalDate createAt;
 }

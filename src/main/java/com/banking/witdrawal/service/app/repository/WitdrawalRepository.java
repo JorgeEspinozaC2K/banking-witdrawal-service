@@ -9,4 +9,11 @@ import reactor.core.publisher.Flux;
 public interface WitdrawalRepository extends ReactiveMongoRepository<Witdrawal, String> {
 
 	public Flux<Witdrawal> findByAccountId(String accountid);
+	
+	/**
+	 * 
+	 * @param customerId
+	 * @return
+	 */
+	public Flux<Witdrawal> findTop10ByCardNumberOrderByOperationDateDesc(Long cardNumber);
 }
